@@ -18,15 +18,16 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setOnClickListener()
         {
             val email = edittext_email.text.toString();
-            val password = edittext_email.text.toString();
+            val password = edittext_password.text.toString();
 
 
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener()
             {
                 if(it.isSuccessful)
                 {
-                    val intent =  Intent(LoginActivity@this, MainActivity::class.java)
+                    val intent =  Intent(this, DashboardActivity::class.java)
                     startActivity(intent)
+                    finish()
                     Toast.makeText(MainActivity@this, "Successfully", Toast.LENGTH_LONG).show()
                 }
                 else
@@ -40,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
         {
             val intent = Intent(LoginActivity@this, RegisterActivity::class.java);
             startActivity(intent)
+            finish()
         }
     }
 }

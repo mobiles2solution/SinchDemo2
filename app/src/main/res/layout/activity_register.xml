@@ -28,7 +28,7 @@
             android:id="@+id/register_paaword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Email Address"
+            android:hint="Enter Password"
             android:layout_margin="30dp"
             />
 

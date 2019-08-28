@@ -1,20 +1,16 @@
 package com.sinch.audio.video
 
-class User ( name: String,  email: String) {
+import com.google.firebase.database.IgnoreExtraProperties
 
-    private var name: String? = name
-    private var email: String? = email
+@IgnoreExtraProperties
 
-    fun setName(Name: String) {
-        this.name = Name
-    }
-    fun getName(): String? {
-        return name
-    }
-    fun setEmail(Email: String) {
-        this.email = Email
-    }
-    fun getEmail(): String? {
-        return email
-    }
-}
+data class User (
+
+    var name: String? = "",
+    var email: String? = "",
+    var password: String? = ""
+
+
+
+
+)
